@@ -16,3 +16,4 @@ deploy:
   default_text_charset: "utf-8"
   bucket: static-react-spike-dev
   region: eu-west-2
+  acl: public_read
