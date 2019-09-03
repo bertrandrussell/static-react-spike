@@ -28,7 +28,11 @@ class Home extends React.Component {
 
 		return this.state.posts.map((post) => {
 			console.log(post);
-			return <p>Post</p>;
+			return (
+				<Link key={post.sys.id} to={`post/${post.sys.id}/`}>
+					{post.fields.title}
+				</Link>
+			);
 		});
 	}
 }
