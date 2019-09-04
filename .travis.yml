@@ -1,19 +1,21 @@
 language: node_js
 node_js:
-  - "node"
+- node
 cache:
-  - yarn
+- yarn
 install:
-  - yarn install
+- yarn install
 script:
-  - yarn build
+- yarn build
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   skip_cleanup: true
   local_dir: build
-  default_text_charset: "utf-8"
+  default_text_charset: utf-8
   bucket: static-react-spike-dev
   region: eu-west-2
   acl: public_read
+env:
+  secure: owHO3N5smlm1cBnWpRFzZlyakZImxcbAhOM/BiIP4W1Mx7uAeVb8SgIIRRPmRHp+B9ab2gXUtxC3Zl0wT0sJkT0A1S4JZy3YBGnFTGT19AKg0T6yT+ukdyB9pIXjZvJf2OzQorkGmSEqa8E2FUGQSpg4qlcJjvk+pGzQrt4C6LLrVeslY5yJeLjof2JSj+ys7HTUkziJR+DLygXs6/ymc71uRVrPGXg6m5pJ9ehW2naCUfufGi+q35NiSsD0XKnAhz6eiJfeVWz2eDroeBAI16mNVHAIW1naH65pYcrhgZrOh1omRo0Una+/DhAakJadEVKoMkkPRl0Zgx3pxjBa+CfDFaUqlY7iDcDzmjGJ96HLuDFJv+DJ9HYmOteMxgvJ/5lMfdSFiXnEbk9R2r2ZZ8YzS3GLw/LXR7T+5u4FDh2VLa+ot+Pkda8X77lkTy7T6JJoBoFOxcytybfVIgUlO/KNuLqbcAcLaBSi7AXSCTYebCKIWNIqR1R8pk7qyKdvv5rL31ZGkL6lctdr+hTQ0UR3Yh5FD+5AtfggECZvGgK9gpX08zUCQjAe1RwT7VzD0E5D+a4gAG8+9+Z1niBnb32z8nm9aaq9dxC/EDER/bvxWNtYemoZc8jGlDnDszIQprqUZ34/JBYMZEsB5Vm3GMzE+13Qp8qQdh6FVqhfLrY=
